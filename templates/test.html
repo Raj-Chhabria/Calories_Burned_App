@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Calories Burned Calculator</title>
+
+        <!-- CSS FILES -->        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="static/css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="static/css/owl.carousel.min.css" rel="stylesheet">
+
+        <link href="static/css/owl.theme.default.min.css" rel="stylesheet">
+
+        <link href="static/css/templatemo-medic-care.css" rel="stylesheet">
+
+    </head>
+    
+    <body id="top">
+    
+        <main>
+
+            <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand mx-auto d-lg-none" href="index.html">
+                        
+                        <strong class="d-block"></strong>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item active">
+                                
+         
+
+                            
+                            <a class="navbar-brand d-none d-lg-block" href="">
+                                Machine Learning Based Calories Burned Calculator
+                                
+                            </a>
+
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+
+            <section class="hero" id="hero">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div id="myCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="static/images/slider/portrait-successful-mid-adult-doctor-with-crossed-arms.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="static/images/slider/young-asian-female-dentist-white-coat-posing-clinic-equipment.jpg" class="img-fluid" alt="">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="static/images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="heroText d-flex flex-column justify-content-center">
+
+                                <h1 class="mt-auto mb-2">
+                                    Better
+                                    <div class="animated-info">
+                                        <span class="animated-item">health</span>
+                                        <span class="animated-item">days</span>
+                                        <span class="animated-item">lives</span>
+                                    </div>
+                                </h1>
+
+                            
+
+                                <div class="heroLinks d-flex flex-wrap align-items-center">
+                                    <a class="custom-link me-4" href="#about" data-hover="Learn More">Learn More</a>
+
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-padding" id="about">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <h1 class="mb-lg-3 mb-3">About This Website</h1>
+                            <p>
+                                <h4>This website tells you the calories burned in your workout session using advanced Machine Learning Algorithms.</h4>
+
+
+                                <h4>Fill all the details given below and know how many calories you burned in your workout session.</h4>
+
+                            </p>
+                            
+
+                            
+                        </div>
+
+                        <div class="col-lg-4 col-md-5 col-12 mx-auto">
+                            <div class="featured-circle bg-white shadow-lg d-flex justify-content-center align-items-center">
+                                <p class="featured-text"><span class="featured-number">99</span>Percent <br> Accuracy</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="section-padding" id="booking">
+                <div class="container">
+                    <div class="row">
+                    
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <div class="booking-form">
+                                
+                                <h2 class="text-center mb-lg-3 mb-2">Enter Details</h2>
+                            
+                                <form action="{{url_for('result')}}" method="post">
+                                    <div class="row">
+                                       <h5>Gender</h5>
+                                        <input type="radio" id="gender" name="gender" value="0">
+                                        <label>Male</label><br>
+                                        <input type="radio" id="gender" name="gender" value="1">
+                                        <label>Female</label><br>
+                                        <br>
+                                    
+
+                                        <div class="col-lg-6 col-12">
+                                            <input type="text" name="age" id="age" class="form-control" placeholder="Age" required>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12">
+                                            <input type="text" id="height" name="height" class="form-control" placeholder="Height" required>
+                                        </div>
+
+
+                                        <br><br>
+
+                                        <div class="col-lg-6 col-12">
+                                            <input type="text" id="weight" name="weight" class="form-control" placeholder="Weight" required>
+                                        </div>
+
+                                        <div class="col-lg-6 col-12">
+                                            <input type="text" name="duration" id="duration" class="form-control" placeholder="Workout Duration (in minutes)" required>
+                                            
+                                        </div>
+
+
+                                        <br><br>
+
+                                        <div class="col-lg-6 col-12">
+                                            <input type="text" name="heartrate" id="heartrate" class="form-control" placeholder="Heart Rate" required>
+                                            
+                                        </div>
+
+                                        <div class="col-lg-6 col-12">
+                                            <input type="text" name="bodytemp" id="bodytemp" class="form-control" placeholder="Body Temperature" required>
+
+                                            
+                                        </div>
+
+    
+
+                                        <div class="col-lg-3 col-md-4 col-6 mx-auto">
+                                            <button type="submit" class="form-control" id="submit-button">Calculate</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        
+                   
+
+                    
+                    
+
+              
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/scrollspy.min.js"></script>
+        <script src="js/custom.js"></script>
+<!--
+
+
+    </body>
+</html>
